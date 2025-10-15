@@ -3,37 +3,411 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Mann</title>
+  <meta property="og:title" content="The Wedding OF : Romi & Tiara">
+  <meta property="og:description" content="Sabtu, 07 Desember 2025">
+  <meta property="og:image" content="https://i.ibb.co/p2xrqXN/Rommi.png">
+  <meta property="og:type" content="website">
+
+  <!-- my fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet" />
+
+  <!-- father icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.js"></script>
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="css/lightbox.css">
+  <title>The Wedding Of : Rommy & Tiara</title>
+  <link rel="shortcut icon" href="images/logo.png" />
+  <!-- toastr -->
+  <link rel="stylesheet" href="assets/toastr/toastr.min.css">
+  <!-- sweaatalert -->
+  <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css">
+  <!-- Aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-  <div class="container animate__animated animate__zoomIn">
-    <!-- profile picture-->
-    <div class="profile">
-      <img src="profile.gif" alt="error image" class="animate__animated animate__pulse animate__infinite" />
-      <p class="animate__animated animate__fadeInDown">I'M Mann</p>
-    </div>
 
-    <!-- Link tree button -->
-    <div class="link">
-      <a href="https://instagram.com/apnd_man?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target=" _blank"
-        class="animate__animated animate__bounceInLeft">Whatshap</a>
-      <a href="http://tiktok.com/@man_apan" target=" _blank"
-        class="animate__animated animate__bounceInLeft animate__delay-1s">tiktok</a>
-      <a href="https://id.shp.ee/PxkC2eM" target=" _blank"
-        class="animate__animated animate__bounceInLeft animate__delay-2s">Shopi</a>
-
-      <!-- footer -->
-      <div class="footer animate__animated animate__bounceInUp animate__delay-4s">
-        <i>LIKE FOLLOW SUBSCRIBE</i>
+  <!-- popup start -->
+  <div id="myPopup" class="popup">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h2 class="example1" data-aos="fade-down" data-aos-delay="100" translate="no"> The Wedding Of</h2>
+        <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000" translate="no">Rommy <span> &</span> Tiara
+        </h1>
+        <h2 class="example1" data-aos="fade-left" data-aos-delay="800" translate="no"> Kepada Yth.</h2>
+        <h2 class="example1" data-aos="fade-right" data-aos-delay="800" translate="no"> A.Kholik S.Kom</h2>
+        <button data-aos="fade-up" data-aos-delay="800" class="close"><i data-feather="mail"
+            style="vertical-align: middle; "></i> Open Invitation </button>
+        <audio id="popupAudio" src="audio/LaufeyFromTheStart.mp3" loop></audio>
+        <!-- Ganti dengan path file audio yang sesuai -->
       </div>
     </div>
+  </div>
+
+  <!-- popup end -->
+  <!-- my Logo  -->
+  <!-- Elemen logo -->
+  <div id="logo">
+    <img src="images/logo.png" alt="Logo" />
+  </div>
+  <!-- hero section start -->
+  <section class="hero" id="home">
+    <div class="slider">
+      <img src="images/hero/hero4.jpg" alt="" class="slide">
+      <img src="images/hero/hero5.jpg" alt="" class="slide">
+      <img src="images/hero/hero6.jpg" alt="" class="slide">
+    </div>
+    <div class="content">
+      <h4>The <span> Wedding Of</span></h4>
+      <h1>Rommy <span> &</span> Tiara</h1>
+      <a href="">Save The Date | <span>07 . 12 . 2025</span></a>
+      <div class="countdown" id="countdown">
+        <div class="waktu">
+          <h5 id="days"></h5>
+          <p>Days</p>
+        </div>
+        <div class="waktu">
+          <h5 id="hours"></h5>
+          <p>Hours</p>
+        </div>
+        <div class="waktu">
+          <h5 id="minutes"></h5>
+          <p>Minutes</p>
+        </div>
+        <div class="waktu">
+          <h5 id="seconds"></h5>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hero section end -->
+
+  <!-- section quran start -->
+  <section class="quran" id="quran">
+    <div class="row">
+      <div class="quran-img" data-aos="zoom-in" data-aos-duration="2000">
+        <img src="images/quran.png" alt="quran" />
+      </div>
+      <div class="content">
+        <h3 data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000">QS Ar-rum 21</h3>
+        <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">"Dan di antara tanda-tanda (kebesaran)-Nya
+          ialah Dia menciptakan pasangan-pasangan untukmu dan jenismu sendiri, agar kamu cenderung dan merasa tentram
+          kepadanya, dan dia menjadikan di antaranya rasa kasih dan sayang"</p>
+      </div>
+    </div>
+  </section>
+  <!-- section quran end -->
+
+  <!-- section about start -->
+  <section class="about" id="about">
+    <div class="row">
+      <div class="about-img" data-aos="zoom-in-up">
+        <img src="images/Romi1.jpg" alt="about" />
+      </div>
+      <div class="content">
+        <h3 data-aos="fade-up">Muhammad Raihan Aditya Rommy S.ikom</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Putra Pertama Dari :</p>
+        <span data-aos="fade-up" data-aos-delay="300">ALM Bapak Ayi Wahyu dan Ibu ipsum.</span>
+        <a href="https://www.instagram.com/adtyrommy?igsh=MWZhdmFmYmkxa21qbQ==" data-aos="fade-up"
+          data-aos-duration="2000" target="_blank" class="cba"><i data-feather="instagram"
+            style="vertical-align: middle"></i> INSTAGRAM</a>
+      </div>
+    </div>
+  </section>
+  <!-- section about end -->
+
+  <!-- section about2 start -->
+  <section class="about2" id="about2">
+    <div class="row">
+      <div class="about2-img" data-aos="zoom-in-up">
+        <img src="images/Tiara1.jpg" alt="about2" />
+      </div>
+      <div class="content">
+        <h3 data-aos="fade-up">NS Mutiara Sandi Skep</h3>
+        <p data-aos="fade-up" data-aos-delay="300">Putri Pertama Dari :</p>
+        <span data-aos="fade-up" data-aos-delay="300">Bapak Abdul Muis dan Ibu Riri</span>
+        <a href="https://www.instagram.com/mutiarasndii?igsh=dDAzbmg2OXJ0N2pu" data-aos="fade-up"
+          data-aos-duration="2000" target="_blank" class="cba"><i data-feather="instagram"
+            style="vertical-align: middle"></i> INSTAGRAM</a>
+      </div>
+    </div>
+  </section>
+  <!-- section about2 end -->
+
+  <!-- section Story start -->
+  <section class="story" id="story">
+    <h2 data-aos="zoom-in">Our Love Story</h2>
+    <div class="part">
+      <h3 data-aos="fade-up">14 Agustus 2014</h3>
+      <p data-aos="fade-up">Tahun 2019, dimana tahun kita menjalani hubungan tepatnya di tanggal 14 Agustus 2019 Romi
+        mengungkapkan perasannya secara langsung kepada Tiara.</p>
+    </div>
+    <div class="part">
+      <h3 data-aos="fade-up">27 Feburari 2021</h3>
+      <p data-aos="fade-up">
+        Kita memutuskan untuk benar-benar serius untuk ke jenjang selanjutnya. Dan akhirnya, pada tanggal 27 Feburari
+        tahun 2021 kita melangsungkan pertunangan.
+      </p>
+    </div>
+    <div class="part">
+      <h3 data-aos="fade-up">26 Juli 2023</h3>
+      <p data-aos="fade-up">Tahun ini, kita akan melangsungkan pernikahan tepatnya 07 Desember 2025, kita akan
+        melaksanakan Akad Nikah dan
+        di
+        tanggal 07 Desember 2025 kita juga melangsungkan acara Resepsi. Kami mengubah status hingga menjadi pasangan
+        suami
+        istri. Semoga allah swt. Memberikan keberkahan pernikahan ini. "AMIN".</p>
+    </div>
+  </section>
+  <!-- section Story end -->
+
+  <!-- Event -->
+  <section class="bg-event">
+    <main class="event" id="date">
+      <h2 data-aos="fade-right">Wedding <span>Event</span></h2>
+
+      <div class="card" data-aos="fade-up-right" data-aos-delay="1000" data-aos-duration="1000">
+        <div class="box-img">
+          <div class="slider-img">
+            <img src="images/event/eventt1.jpg" alt="" class="event-img" />
+            <img src="images/event/e1.jpg" alt="" class="event-img" />
+            <img src="images/event/e2.jpg" alt="" class="event-img" />
+
+          </div>
+        </div>
+        <div class="box-date">
+          <div class="title-event">
+            <h3>Akad Nikah </h3>
+          </div>
+          <div class="date-event">
+            <div class="tgl">
+              <h4>07</h4>
+            </div>
+            <div class="detail">
+              <h5>Sabtu</h5>
+              <h5>Desember</h5>
+              <h5>2025</h5>
+            </div>
+
+            <div class="jam">
+              <p><i data-feather="clock" style="color: #000000;"></i> 08.00 WIB </p>
+              <div class="lokasi">
+                <h5>Lokasi Acara</h5>
+                <p>gedung balai latihan kerja/BLK (jalan kh agus salim bekasi tinyr 171112</p>
+                <a href="https://maps.app.goo.gl/x9EY5T3US8skuh4X8" target="_blank" class="cbt">Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <main class="event-2" id="date">
+
+      <div class="card" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="1000">
+        <div class="box-img">
+          <div class="slider-img">
+            <img src="images/event/e3.jpg" alt="" class="event-2-img" />
+            <img src="images/event/e4.jpg" alt="" class="event-2-img" />
+            <img src="images/event/e5.jpg" alt="" class="event-2-img" />
+          </div>
+        </div>
+        <div class="box-date">
+          <div class="title-event-2">
+            <h3>Resepsi </h3>
+          </div>
+          <div class="date-event-2">
+            <div class="tgl">
+              <h4>07</h4>
+            </div>
+            <div class="detail">
+              <h5>Sabtu</h5>
+              <h5>Desember</h5>
+              <h5>2025</h5>
+            </div>
+
+            <div class="jam">
+              <p><i data-feather="clock" style="color: #000;"></i> 11.00 WIB </p>
+              <div class="lokasi">
+                <h5>Lokasi Acara</h5>
+                <p>gedung balai latihan kerja/BLK (jalan kh agus salim bekasi tinyr 171112</p>
+                <a href="https://maps.app.goo.gl/x9EY5T3US8skuh4X8" target="_blank" class="cbt">Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </section>
+  <!-- end Event Section-->
+
+  <!-- Start Galley Section -->
+  <div class="bg-gallery">
+    <section class="gallery" id="gallery">
+      <h2 data-aos="fade-right">Gallery Our Moment</h2>
+
+      <div class="container">
+        <div class="img-gallery">
+          <a href="images/gallery/A1.jpg" data-lightbox="models" data-title="Caption1">
+            <img src="images/gallery/A1.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A2.jpg" data-lightbox="models" data-title="Caption2">
+            <img src="images/gallery/A2.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A3.jpg" data-lightbox="models" data-title="Caption3">
+            <img src="images/gallery/A3.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A4.jpg" data-lightbox="models" data-title="Caption4">
+            <img src="images/gallery/A4.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A5.jpg" data-lightbox="models" data-title="Caption5">
+            <img src="images/gallery/A5.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A6.jpg" data-lightbox="models" data-title="Caption6">
+            <img src="images/gallery/A6.jpg" alt="" class="img">
+          </a>
+          <a href="images/gallery/A7.jpg" data-lightbox="models" data-title="Caption7">
+            <img src="images/gallery/A7.jpg" alt="" class="img">
+          </a>
+          <a href="images/event/e5.jpg" data-lightbox="models" data-title="Caption8">
+            <img src="images/event/e5.jpg" alt="" class="img">
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End Galley Section-->
+  <!-- Start Wedding gift -->
+  <section class="gift" id="gift">
+    <h2 data-aos="fade-down">Wedding Gift</h2>
+    <p data-aos="fade-up" data-aos-delay="0">Bagi bapak/ibu/saudara/i yang ingin mengirimkan hadiah pernikahan dapat
+      melalui virtual account atau e-wallet di bawah ini:</p>
+    <div class="buttom" data-aos="fade-up">
+      <a class="rekening" id="show-cards"> Klik Disini <i data-feather="arrow-right"
+          style="vertical-align: middle"></i></a>
+    </div>
+    <div class="card-container" id="card-container">
+      <div class="card">
+        <h3>BCA</h3>
+        <h5 id="textSalin">0953-7462-44</h5>
+        <p id="yani">Rommy</p>
+        <button class="salin" id="show-cards" onclick="noRomi()"> <i data-feather="copy"
+            style="vertical-align: middle"></i> Salin No.BCA </button>
+      </div>
+      <div class="card">
+        <h3>Multiartas Sentosa</h3>
+        <h5 id="textSalin2">1003-506-742</h5>
+        <p id="yani">Mutiara</p>
+        <button class="salin" onclick="noTiara()" id="show-cards"> <i data-feather="copy"
+            style="vertical-align: middle"></i> Salin No.Ms </button>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Wedding gift -->
+  <!-- Start RSVP -->
+  <section class="rsvp">
+    <div class="row">
+
+      <img src="images/rsvp.jpg" alt="" class="rsvp-img">
+      <div class="message" data-aos="fade-down">
+        <form id="formMessage">
+          <div class="input-group">
+            <input type="text" name="nama" placeholder="Nama">
+          </div>
+          <div class="input-group">
+            <input type="text" name="hubungan" placeholder="Hubungan (Saudara, Teman Kerja, Teman Sekolah)">
+          </div>
+          <div class="input-group">
+            <textarea cols="30" rows="10" name="pesan"
+              placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
+          </div>
+          <button type="submit" class="btn">Send <i data-feather="arrow-right" data-aos="fade-up"
+              style="vertical-align: middle"></i></button>
+        </form>
+        <div class="container-card" data-aos="fade-up">
+          <div class="card-message">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End RSVP -->
+
+  <!-- Start Doa -->
+  <section class="doa" id="home">
+
+    <div class="content">
+      <h1>TerimaKasih</h1>
+      <h4>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan
+        memberikan do’a restu kepada kami.</h4>
+      <h4 style="margin-top: 8rem;">KAMI YANG BERBAHAGIA</h4>
+      <h3>Romi <span>&</span> Tiara</h3>
+    </div>
+  </section>
+  <!-- End Doa -->
+
+  <!-- start footer -->
+  <footer>
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+      <a href="#" style="vertical-align: middle">A2KTecInnovations</a>
+    </div>
+    <div class="socials">
+      <a href="" class="wa">
+        WA : 0815 6369 5625
+      </a>
+      <a href="" class="ig">| IG : @coolpapi_</a>
+    </div>
+    <div class="credit">
+      <p>Copyright &copy; 2024 - 2025</p>
+      <h5>HUBUNGI KAMI</h5>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!-- father icons -->
+  <script>
+    feather.replace();
+  </script>
+  <!-- jquery -->
+  <script src="js/jquery.js"></script>
+  <!-- arctext -->
+  <script src="js/script.js"></script>
+  <!-- Lihgtbox js -->
+  <script src="js/lightbox-plus-jquery.js"></script>
+  <!-- Message Strorage -->
+  <script src="js/strorage.js"></script>
+  <!-- toastr -->
+  <script src="assets/toastr/toastr.min.js"></script>
+  <!-- Aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- arctext -->
+  <script src="assets/Arctext/js/jquery.arctext.js"></script>
+  <!-- sweetalert -->
+  <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
+  <script>
+
+    const gallery = document.querySelectorAll('.img');
+
+    gallery.forEach((img, i) => {
+      img.dataset.aos = 'fade-down';
+      img.dataset.aosDelay = i * 100;
+    });
+    AOS.init({
+      duration: 1500,
+      once: true
+    });
+  </script>
+
 </body>
 
 </html>
